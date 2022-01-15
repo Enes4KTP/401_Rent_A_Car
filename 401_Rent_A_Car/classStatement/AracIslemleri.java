@@ -10,10 +10,10 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 	private Integer id;
 	private String marka;
 	private String model;
-	private String yýl;
+	private String yÄ±l;
 	private String plaka;
 	private String renk;
-	private String yakýtTipi;
+	private String yakÄ±tTipi;
 	private String vites;
 	private String yasSiniri;
 	private Integer fiyat;
@@ -35,7 +35,7 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 		// TODO Auto-generated method stub
 		try {
 			connection= DriverManager.getConnection(databaseURL);
-			System.out.println("DataBase ile iletiþim baþlatýldý.");
+			System.out.println("DataBase ile iletiÅŸim baÅŸlatÄ±ldÄ±.");
 		
 			
 		} catch (SQLException e) {
@@ -58,34 +58,34 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("DataBase ile iletiþim sonlandýrýldý.");
+			System.out.println("DataBase ile iletiÅŸim sonlandÄ±rÄ±ldÄ±.");
 		}
 	
 	}
 	public AracIslemleri() {}
-	//Verileri Çekme
-	public AracIslemleri(int id,String Marka,String Model,String Yýl,String Plaka,String Renk,String YakitTip,String Vites,String yasSinir,int Fiyat,String resimURL,String aracKiralanma) {
+	//Verileri Ã‡ekme
+	public AracIslemleri(int id,String Marka,String Model,String YÄ±l,String Plaka,String Renk,String YakitTip,String Vites,String yasSinir,int Fiyat,String resimURL,String aracKiralanma) {
 		 setId(id);
 		 setMarka(Marka);
 		 setModel(Model);
-		 setYýl(Yýl);
+		 setYÄ±l(YÄ±l);
 		 setPlaka(Plaka);
 		 setRenk(Renk);
-		 setYakýtTipi(YakitTip);
+		 setYakÄ±tTipi(YakitTip);
 		 setVites(Vites);
 		 setYasSiniri(yasSinir);
 		 setFiyat(Fiyat);
 		 setResimURL(resimURL);
 		 setAracDurum(aracKiralanma);
 	}
-	public AracIslemleri(int id,String Marka,String Model,String Yýl,String Plaka,String Renk,String YakitTip,String Vites,String yasSinir,int Fiyat,String resimURL) {
+	public AracIslemleri(int id,String Marka,String Model,String YÄ±l,String Plaka,String Renk,String YakitTip,String Vites,String yasSinir,int Fiyat,String resimURL) {
 		 setId(id);
 		 setMarka(Marka);
 		 setModel(Model);
-		 setYýl(Yýl);
+		 setYÄ±l(YÄ±l);
 		 setPlaka(Plaka);
 		 setRenk(Renk);
-		 setYakýtTipi(YakitTip);
+		 setYakÄ±tTipi(YakitTip);
 		 setVites(Vites);
 		 setYasSiniri(yasSinir);
 		 setFiyat(Fiyat);
@@ -94,14 +94,14 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 	
 	
 	//INSERT//
-	public AracIslemleri(String Marka,String Model,String Yýl,String Plaka,String Renk,String YakitTip,String Vites,String yasSinir,int Fiyat,String resimURL) {
+	public AracIslemleri(String Marka,String Model,String YÄ±l,String Plaka,String Renk,String YakitTip,String Vites,String yasSinir,int Fiyat,String resimURL) {
 		
 		 setMarka(Marka);
 		 setModel(Model);
-		 setYýl(Yýl);
+		 setYÄ±l(YÄ±l);
 		 setPlaka(Plaka);
 		 setRenk(Renk);
-		 setYakýtTipi(YakitTip);
+		 setYakÄ±tTipi(YakitTip);
 		 setVites(Vites);
 		 setYasSiniri(yasSinir);
 		 setFiyat(Fiyat);
@@ -122,10 +122,10 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 			 setId(result.getInt("ID"));
 			 setMarka(result.getString("Marka"));
 			 setModel(result.getString("Model"));
-			 setYýl(result.getString("Yýl"));
+			 setYÄ±l(result.getString("YÄ±l"));
 			 setPlaka(result.getString("Plaka"));
 			 setRenk(result.getString("Renk"));
-			 setYakýtTipi(result.getString("Yakit_Tipi"));
+			 setYakÄ±tTipi(result.getString("Yakit_Tipi"));
 			 setVites(result.getString("Vites"));
 			 setYasSiniri(result.getString("Yas_Siniri"));
 			 setFiyat(result.getInt("Fiyat"));
@@ -160,12 +160,12 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 		this.model = model;
 	}
 
-	public String getYýl() {
-		return yýl;
+	public String getYÄ±l() {
+		return yÄ±l;
 	}
 
-	private void setYýl(String yýl) {
-		this.yýl = yýl;
+	private void setYÄ±l(String yÄ±l) {
+		this.yÄ±l = yÄ±l;
 	}
 
 	public String getPlaka() {
@@ -184,12 +184,12 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 		this.renk = renk;
 	}
 
-	public String getYakýtTipi() {
-		return yakýtTipi;
+	public String getYakÄ±tTipi() {
+		return yakÄ±tTipi;
 	}
 
-	private void setYakýtTipi(String yakýtTipi) {
-		this.yakýtTipi = yakýtTipi;
+	private void setYakÄ±tTipi(String yakÄ±tTipi) {
+		this.yakÄ±tTipi = yakÄ±tTipi;
 	}
 
 	public String getVites() {
@@ -229,9 +229,9 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 	public void Insert(AracIslemleri entity) throws SQLException {
 		// TODO Auto-generated method stub
 		acDataBaseOpen();
-		String laststatus="Kiralanmamýþ";
+		String laststatus="KiralanmamÄ±ÅŸ";
 		Statement statement = connection.createStatement();
-		statement.execute("INSERT into AracBilgileri(Marka,Model,Yýl,Plaka,Renk,Yakit_Tipi,Vites,Yas_Siniri,Fiyat,AracResim,KiralanmaDurumu) VALUES('"+getMarka()+"','"+getModel()+"','"+getYýl()+"','"+getPlaka()+"','"+getRenk()+"','"+getYakýtTipi()+"','"+getVites()+"','"+getYasSiniri()+"','"+getFiyat()+"','"+getResimURL()+"','"+laststatus +"')");
+		statement.execute("INSERT into AracBilgileri(Marka,Model,YÄ±l,Plaka,Renk,Yakit_Tipi,Vites,Yas_Siniri,Fiyat,AracResim,KiralanmaDurumu) VALUES('"+getMarka()+"','"+getModel()+"','"+getYÄ±l()+"','"+getPlaka()+"','"+getRenk()+"','"+getYakÄ±tTipi()+"','"+getVites()+"','"+getYasSiniri()+"','"+getFiyat()+"','"+getResimURL()+"','"+laststatus +"')");
 		acDataBaseClose();
 	}
 
@@ -245,16 +245,16 @@ public class AracIslemleri implements lConnection<AracIslemleri>{
 		// TODO Auto-generated method stub
 		acDataBaseOpen();
 		connection.createStatement();
-		String query="Update AracBilgileri SET Marka=?,Model=?,Yýl=?,Plaka=?,Renk=?,Yakit_Tipi=?,Vites=?,Yas_Siniri=?,Fiyat=?,AracResim=? WHERE ID=?";
+		String query="Update AracBilgileri SET Marka=?,Model=?,YÄ±l=?,Plaka=?,Renk=?,Yakit_Tipi=?,Vites=?,Yas_Siniri=?,Fiyat=?,AracResim=? WHERE ID=?";
 		PreparedStatement preparedStatement = connection.prepareStatement(query);
 		
 
 		preparedStatement.setString(1,entity.getMarka());
 		preparedStatement.setString(2,entity.getModel());
-		preparedStatement.setString(3,entity.getYýl());
+		preparedStatement.setString(3,entity.getYÄ±l());
 		preparedStatement.setString(4,entity.getPlaka());
 		preparedStatement.setString(5,entity.getRenk());
-		preparedStatement.setString(6,entity.getYakýtTipi());
+		preparedStatement.setString(6,entity.getYakÄ±tTipi());
 		preparedStatement.setString(7,entity.getVites());
 		preparedStatement.setString(8,entity.getYasSiniri());
 		preparedStatement.setInt(9,entity.getFiyat());
@@ -303,12 +303,3 @@ return araclistele;
 	
 	
 	}
-
-
-	 	
-	
-	
-	
-
-	
-
