@@ -84,8 +84,8 @@ public class AracEkle extends JFrame {
 		JLabel short_spaceLabel6 = new JLabel("                               ");
 
 		
-		JMenu carMenu = new JMenu("Araç Ýþlemeleri");
-		JMenu contratMenu = new JMenu("Sözleþme Ýþlemleri");
+		JMenu carMenu = new JMenu("AraÃ§ Ä°ÅŸlemeleri");
+		JMenu contratMenu = new JMenu("SÃ¶zleÅŸme Ä°ÅŸlemleri");
 		contratMenu.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -103,7 +103,7 @@ public class AracEkle extends JFrame {
 				jump.setVisible(true);
 			}
 		});
-		JMenu infoMenu = new JMenu("Hakkýnda");
+		JMenu infoMenu = new JMenu("HakkÄ±nda");
 		infoMenu.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -116,7 +116,7 @@ public class AracEkle extends JFrame {
 		
 		
 
-		JMenuItem s5 = new JMenuItem("Araç Listele");
+		JMenuItem s5 = new JMenuItem("AraÃ§ Listele");
 		s5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -126,7 +126,7 @@ public class AracEkle extends JFrame {
 				jump.setVisible(true);
 			}
 		});
-		JMenuItem s6 = new JMenuItem("Araç Ekle");
+		JMenuItem s6 = new JMenuItem("AraÃ§ Ekle");
 		s6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -244,7 +244,7 @@ public class AracEkle extends JFrame {
 		lblKullaniciAdi_7.setBounds(388, 131, 142, 34);
 		contentPane.add(lblKullaniciAdi_7);
 
-		JLabel lblKullaniciAdi_8 = new JLabel("F\u0130YAT(günlük) =");
+		JLabel lblKullaniciAdi_8 = new JLabel("F\u0130YAT(gÃ¼nlÃ¼k) =");
 		lblKullaniciAdi_8.setForeground(Color.LIGHT_GRAY);
 		lblKullaniciAdi_8.setFont(new Font("Times New Roman", Font.BOLD, 12));
 		lblKullaniciAdi_8.setBounds(388, 202, 142, 34);
@@ -287,8 +287,8 @@ public class AracEkle extends JFrame {
 		btnAraResimEkle.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
-
-				fileChooser.setDialogTitle("Resim Seçiniz");
+//
+				fileChooser.setDialogTitle("Resim SeÃ§iniz");
 				fileChooser.setAcceptAllFileFilterUsed(false);
 				FileNameExtensionFilter filter = new FileNameExtensionFilter("PNG and GIF images", "png", "gif");
 				fileChooser.addChoosableFileFilter(filter);
@@ -328,7 +328,7 @@ System.out.print(carImage);
 						ekle.Insert(ekle);
 						ekle.acDataBaseClose();
 						JOptionPane.showMessageDialog(null,
-								"Araç baþarýyla eklenmiþtir.",
+								"AraÃ§ baÅŸarÄ±yla eklenmiÅŸtir.",
 								"Uyari mesaji",
 								JOptionPane.WARNING_MESSAGE);
 					} catch (SQLException e1) {
