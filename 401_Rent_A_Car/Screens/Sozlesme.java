@@ -77,7 +77,7 @@ public class Sozlesme extends JFrame {
 	while(rs.next())
 	{
 		cars=new AracIslemleri(rs.getInt("ID"),rs.getString("Marka"),
-				rs.getString("Model"),rs.getString("Yýl"),
+				rs.getString("Model"),rs.getString("YÄ±l"),
 				rs.getString("Plaka"),rs.getString("Renk"),rs.getString("Yakit_Tipi"),
 				rs.getString("Vites"),rs.getString("Yas_Siniri"),rs.getInt("Fiyat")
 				,rs.getString("AracResim"),rs.getString("KiralanmaDurumu"));
@@ -96,7 +96,7 @@ public class Sozlesme extends JFrame {
 		
 		DefaultTableModel clearModel = (DefaultTableModel) aracTable.getModel();
 		
-		clearModel.setRowCount(0); //her þeyi sýfýrlýyorum
+		clearModel.setRowCount(0); //her ÅŸeyi sÄ±fÄ±rlÄ±yorum
 		 ArrayList<AracIslemleri> products = new ArrayList<AracIslemleri>();
 	        products = new AracListele().carList();
 	        
@@ -110,10 +110,10 @@ public class Sozlesme extends JFrame {
 	            data[0] = String.valueOf(products.get(i).getId());
 	            data[1] = products.get(i).getMarka();
 	            data[2] = products.get(i).getModel();
-	            data[3] = products.get(i).getYýl();
+	            data[3] = products.get(i).getYÄ±l();
 	            data[4] = products.get(i).getPlaka();
 	            data[5] = products.get(i).getRenk();
-	            data[6] = products.get(i).getYakýtTipi();
+	            data[6] = products.get(i).getYakÄ±tTipi();
 	            data[7] = products.get(i).getVites();
 	            data[8] = products.get(i).getYasSiniri();
 	            data[9] = String.valueOf(products.get(i).getFiyat());
@@ -160,10 +160,10 @@ for(int i=0;i<list.size();i++)
 	row[0]=list.get(i).getId();
 	row[1]=list.get(i).getMarka();
 	row[2]=list.get(i).getModel();
-	row[3]=list.get(i).getYýl();
+	row[3]=list.get(i).getYÄ±l();
 	row[4]=list.get(i).getPlaka();
 	row[5]=list.get(i).getRenk();
-	row[6]=list.get(i).getYakýtTipi();
+	row[6]=list.get(i).getYakÄ±tTipi();
 	row[7]=list.get(i).getVites();
 	row[8]=list.get(i).getYasSiniri();
 	row[9]=list.get(i).getFiyat();
@@ -390,7 +390,7 @@ for(int i=0;i<list.size();i++)
 						textField_12.getText()==null||dateChooser.getDate().toString()==null||dateChooser_1.getDate().toString()==null||textField_23.getText()==null||textField_13.getText()==null)
 				{
 					JOptionPane.showMessageDialog(null,
-							"Lütfen her þeyi doldurunuz !!",
+							"LÃ¼tfen her ÅŸeyi doldurunuz !!",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);
 					
@@ -399,28 +399,28 @@ for(int i=0;i<list.size();i++)
 				{
 					
 					
-					if(textField_16.getText().equals("Kiralanmadý"))
+					if(textField_16.getText().equals("KiralanmadÄ±"))
 					{
 						
 					int yas=2022-Integer.parseInt(dogumTarihiFormatted.getText());
-					if(yasKontrol.equals("30 Yaþ Ve Üstü")&& yas<30)
+					if(yasKontrol.equals("30 YaÅŸ Ve ÃœstÃ¼")&& yas<30)
 					{
 						JOptionPane.showMessageDialog(null,
-								"Seçtiðiniz araba 30 yaþ altýna verilmemektedir !!",
+								"SeÃ§tiÄŸiniz araba 30 yaÅŸ altÄ±na verilmemektedir !!",
 								"Uyari mesaji",
 								JOptionPane.WARNING_MESSAGE);
 						
 					}
-					else if(yasKontrol.equals("25 Yaþ Ve Üstü")&& yas<25)
+					else if(yasKontrol.equals("25 YaÅŸ Ve ÃœstÃ¼")&& yas<25)
 					{	JOptionPane.showMessageDialog(null,
-							"Seçtiðiniz araba 25 yaþ altýna verilmemektedir !!",
+							"SeÃ§tiÄŸiniz araba 25 yaÅŸ altÄ±na verilmemektedir !!",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);
 						
 					}
-					else if(yasKontrol.equals("20 Yaþ Ve Üstü")&& yas<20)
+					else if(yasKontrol.equals("20 YaÅŸ Ve ÃœstÃ¼")&& yas<20)
 					{	JOptionPane.showMessageDialog(null,
-							"Seçtiðiniz araba 20 yaþ altýna verilmemektedir !!",
+							"SeÃ§tiÄŸiniz araba 20 yaÅŸ altÄ±na verilmemektedir !!",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);
 						
@@ -439,8 +439,8 @@ for(int i=0;i<list.size();i++)
 						ekle.Update(ekle);
 						ClearTable();
 						JOptionPane.showMessageDialog(null,
-							    "Hayýrlý olsun süre bitimine kadar araç sizindir.",
-							    "ÝÞLEM BAÞARILI BÝR ÞEKÝLDE TAMLANDI",
+							    "HayÄ±rlÄ± olsun sÃ¼re bitimine kadar araÃ§ sizindir.",
+							    "Ä°ÅžLEM BAÅžARILI BÄ°R ÅžEKÄ°LDE TAMLANDI",
 							    JOptionPane.PLAIN_MESSAGE);
 					} catch (SQLException e1) {
 						// TODO Auto-generated catch block
@@ -450,7 +450,7 @@ for(int i=0;i<list.size();i++)
 					}
 					else {
 						JOptionPane.showMessageDialog(null,
-								"Seçtiðiniz araba kiralanmýþtýr. !!",
+								"SeÃ§tiÄŸiniz araba kiralanmÄ±ÅŸtÄ±r. !!",
 								"Uyari mesaji",
 								JOptionPane.WARNING_MESSAGE);
 					}
@@ -483,7 +483,7 @@ for(int i=0;i<list.size();i++)
 		
 	
 		
-		//ÞARTLANDIRMA
+		//ÅžARTLANDIRMA
 		aracTable.setModel(new DefaultTableModel(
 				new Object[][] {
 				},
@@ -571,11 +571,11 @@ for(int i=0;i<list.size();i++)
 		JButton btnHesapla = new JButton("Hesapla");
 		btnHesapla.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int yýl1,yýl2,ay1,ay2,gun1,gun2;
+				int yÄ±l1,yÄ±l2,ay1,ay2,gun1,gun2;
 				if(dateChooser.getDate()==null||dateChooser_1.getDate()==null)
 				{
 					JOptionPane.showMessageDialog(null,
-							"Lütfen tarih bilgileri tam giriniz.",
+							"LÃ¼tfen tarih bilgileri tam giriniz.",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);
 				}
@@ -585,38 +585,38 @@ for(int i=0;i<list.size();i++)
 				 SimpleDateFormat dcn = new SimpleDateFormat("yyyy-MM-dd");
 				    date = dcn.format(dateChooser.getDate());
 				    
-				    yýl1=Integer.parseInt(date.substring(0,4));
+				    yÄ±l1=Integer.parseInt(date.substring(0,4));
 				    ay1=Integer.parseInt(date.substring(5,7));
 				    gun1=Integer.parseInt(date.substring(8,10));
 				    
 				     date2= dcn.format(dateChooser_1.getDate());
-				    yýl2=Integer.parseInt(date2.substring(0,4));
+				    yÄ±l2=Integer.parseInt(date2.substring(0,4));
 				    ay2=Integer.parseInt(date2.substring(5,7));
 				    gun2=Integer.parseInt(date2.substring(8,10));
 				    double  tutar=0;
-				    if(yýl2==yýl1 && ay2<ay1)
+				    if(yÄ±l2==yÄ±l1 && ay2<ay1)
 			
 				    {
 				    		JOptionPane.showMessageDialog(null,
-									"Son tarih, ilk tarihten geride olamaz. Lütfen Düzeltiniz.",
+									"Son tarih, ilk tarihten geride olamaz. LÃ¼tfen DÃ¼zeltiniz.",
 									"Uyari mesaji",
 									JOptionPane.WARNING_MESSAGE);	
 				    }
-				    else if(yýl1>yýl2)
+				    else if(yÄ±l1>yÄ±l2)
 				    {
 				    	JOptionPane.showMessageDialog(null,
-								"Son tarih, ilk tarihten geride olamaz. Lütfen Düzeltiniz.",
+								"Son tarih, ilk tarihten geride olamaz. LÃ¼tfen DÃ¼zeltiniz.",
 								"Uyari mesaji",
 								JOptionPane.WARNING_MESSAGE);
 				    }
 				    else
 				    {
-				    	tutar=((yýl2-yýl1)*sonfiyattutucu*365)+((ay2-ay1)*sonfiyattutucu*30)+((gun2-gun1)*sonfiyattutucu);
+				    	tutar=((yÄ±l2-yÄ±l1)*sonfiyattutucu*365)+((ay2-ay1)*sonfiyattutucu*30)+((gun2-gun1)*sonfiyattutucu);
 				    	
 				    }
-				    if(yýl2==yýl1&& ay2==ay1&& gun2<gun1)
+				    if(yÄ±l2==yÄ±l1&& ay2==ay1&& gun2<gun1)
 				    {JOptionPane.showMessageDialog(null,
-							"Son tarih, ilk tarihten geride olamaz. Lütfen Düzeltiniz.",
+							"Son tarih, ilk tarihten geride olamaz. LÃ¼tfen DÃ¼zeltiniz.",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);
 				    	
@@ -624,16 +624,16 @@ for(int i=0;i<list.size();i++)
 				    else if (gun1==gun2)
 				    {
 				    	JOptionPane.showMessageDialog(null,
-				    	"Ayný gün seçim yapýlmaz !!",
+				    	"AynÄ± gÃ¼n seÃ§im yapÄ±lmaz !!",
 						"Uyari mesaji",
 						JOptionPane.WARNING_MESSAGE);
 				    }
 				    else
 				    {
-				    	tutar=((yýl2-yýl1)*sonfiyattutucu*365)+((ay2-ay1)*sonfiyattutucu*30)+((gun2-gun1)*sonfiyattutucu);
+				    	tutar=((yÄ±l2-yÄ±l1)*sonfiyattutucu*365)+((ay2-ay1)*sonfiyattutucu*30)+((gun2-gun1)*sonfiyattutucu);
 				    	
 				    }
-				    if(tutar>0) //Kontrol Aþamasý
+				    if(tutar>0) //Kontrol AÅŸamasÄ±
 				    {
 				    	
 				    	textField_23.setText(Double.toString(tutar));
@@ -695,7 +695,7 @@ for(int i=0;i<list.size();i++)
 		JFormattedTextField cepFormatted_1_1 = new JFormattedTextField(formatter);
 		cepFormatted_1_1.setBounds(107, 168, 86, 16);
 		contentPane.add(cepFormatted_1_1);
-		//Listelenen Verilerin TextField'lere Aktarýlmasý//
+		//Listelenen Verilerin TextField'lere AktarÄ±lmasÄ±//
 		
 		listele();
 		
@@ -716,8 +716,8 @@ for(int i=0;i<list.size();i++)
 		JLabel short_spaceLabel6 = new JLabel("                               ");
 
 		
-		JMenu carMenu = new JMenu("Araç Ýþlemeleri");
-		JMenu contratMenu = new JMenu("Sözleþme Ýþlemleri");
+		JMenu carMenu = new JMenu("AraÃ§ Ä°ÅŸlemeleri");
+		JMenu contratMenu = new JMenu("SÃ¶zleÅŸme Ä°ÅŸlemleri");
 		contratMenu.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -735,7 +735,7 @@ for(int i=0;i<list.size();i++)
 				jump.setVisible(true);
 			}
 		});
-		JMenu infoMenu = new JMenu("Hakkýnda");
+		JMenu infoMenu = new JMenu("HakkÄ±nda");
 		infoMenu.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -748,7 +748,7 @@ for(int i=0;i<list.size();i++)
 		
 	
 
-		JMenuItem s5 = new JMenuItem("Araç Listele");
+		JMenuItem s5 = new JMenuItem("AraÃ§ Listele");
 		s5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -758,7 +758,7 @@ for(int i=0;i<list.size();i++)
 				jump.setVisible(true);
 			}
 		});
-		JMenuItem s6 = new JMenuItem("Araç Ekle");
+		JMenuItem s6 = new JMenuItem("AraÃ§ Ekle");
 		s6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
