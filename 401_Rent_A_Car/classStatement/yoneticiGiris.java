@@ -6,13 +6,13 @@ import java.sql.Statement;
 public class yoneticiGiris implements lLoginStatement<yoneticiGiris>{
 	
 	private Connection connection;
-	static int sayac=0; //1'se baþarýlý demek
+	static int sayac=0; //1'se baÅŸarÄ±lÄ± demek
 	@Override
 	public void acDataBaseOpen() {
 		// TODO Auto-generated method stub
 		try {
 			connection= DriverManager.getConnection(databaseURL);
-			System.out.println("DataBase ile iletiþim baþlatýldý.");
+			System.out.println("DataBase ile iletiÅŸim baÅŸlatÄ±ldÄ±.");
 		
 			
 		} catch (SQLException e) {
@@ -29,7 +29,7 @@ public class yoneticiGiris implements lLoginStatement<yoneticiGiris>{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("DataBase ile iletiþim sonlandýrýldý.");
+			System.out.println("DataBase ile iletiÅŸim sonlandÄ±rÄ±ldÄ±.");
 		}
 	}
 
@@ -51,7 +51,7 @@ public class yoneticiGiris implements lLoginStatement<yoneticiGiris>{
                 }
                 else
                 {
-                	System.out.print("HATALI GÝRÝÞ LÜTFEN TEKRAR DENEYÝNÝZ!!");
+                	System.out.print("HATALI GÄ°RÄ°Åž LÃœTFEN TEKRAR DENEYÄ°NÄ°Z!!");
                 }
                 
             	acDataBaseClose();
