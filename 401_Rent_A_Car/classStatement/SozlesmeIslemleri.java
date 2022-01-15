@@ -43,8 +43,8 @@ public class SozlesmeIslemleri implements lConnection<SozlesmeIslemleri> {
 		this.kullaniciID = kulID;
 	}
 
-	public String Status="Kiralandý";
-	public String Status1="Kiralanmadý";
+	public String Status="KiralandÄ±";
+	public String Status1="KiralanmadÄ±";
 	
 	public String getAd() {
 		return ad;
@@ -266,7 +266,7 @@ public class SozlesmeIslemleri implements lConnection<SozlesmeIslemleri> {
 		// TODO Auto-generated method stub
 		try {
 			connection= DriverManager.getConnection(databaseURL);
-			System.out.println("DataBase ile iletiþim baþlatýldý.");
+			System.out.println("DataBase ile iletiÅŸim baÅŸlatÄ±ldÄ±.");
 		
 			
 		} catch (SQLException e) {
@@ -284,7 +284,7 @@ public class SozlesmeIslemleri implements lConnection<SozlesmeIslemleri> {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("DataBase ile iletiþim sonlandýrýldý.");
+			System.out.println("DataBase ile iletiÅŸim sonlandÄ±rÄ±ldÄ±.");
 		}
 	
 	}
