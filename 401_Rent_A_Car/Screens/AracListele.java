@@ -62,7 +62,7 @@ public class AracListele extends JFrame {
 	while(rs.next())
 	{
 		cars=new AracIslemleri(rs.getInt("ID"),rs.getString("Marka"),
-				rs.getString("Model"),rs.getString("Yýl"),
+				rs.getString("Model"),rs.getString("YÄ±l"),
 				rs.getString("Plaka"),rs.getString("Renk"),rs.getString("Yakit_Tipi"),
 				rs.getString("Vites"),rs.getString("Yas_Siniri"),rs.getInt("Fiyat")
 				,rs.getString("AracResim"),rs.getString("KiralanmaDurumu"));
@@ -83,7 +83,7 @@ public class AracListele extends JFrame {
 		
 		DefaultTableModel clearModel = (DefaultTableModel) table.getModel();
 		
-		clearModel.setRowCount(0); //her þeyi sýfýrlýyorum
+		clearModel.setRowCount(0); //her ÅŸeyi sÄ±fÄ±rlÄ±yorum
 		 ArrayList<AracIslemleri> products = new ArrayList<AracIslemleri>();
 	        products = new AracListele().carList();
 	        
@@ -97,10 +97,10 @@ public class AracListele extends JFrame {
 	            data[0] = String.valueOf(products.get(i).getId());
 	            data[1] = products.get(i).getMarka();
 	            data[2] = products.get(i).getModel();
-	            data[3] = products.get(i).getYýl();
+	            data[3] = products.get(i).getYÄ±l();
 	            data[4] = products.get(i).getPlaka();
 	            data[5] = products.get(i).getRenk();
-	            data[6] = products.get(i).getYakýtTipi();
+	            data[6] = products.get(i).getYakÄ±tTipi();
 	            data[7] = products.get(i).getVites();
 	            data[8] = products.get(i).getYasSiniri();
 	            data[9] = String.valueOf(products.get(i).getFiyat());
@@ -161,7 +161,7 @@ public class AracListele extends JFrame {
 			switch((String) model.getValueAt(selectedRowIndex, 7))
 			{
 			
-			case "Yarý Otomatik":
+			case "YarÄ± Otomatik":
 				comboBox_1.setSelectedIndex(1);
 				break;
 			case "Otomatik":
@@ -175,13 +175,13 @@ public class AracListele extends JFrame {
 			switch((String) model.getValueAt(selectedRowIndex, 8))
 			{
 			
-			case "20 Yaþ Ve Üstü":
+			case "20 YaÅŸ Ve ÃœstÃ¼":
 				comboBox_2.setSelectedIndex(1);
 				break;
-			case "25 Yaþ Ve Üstü":
+			case "25 YaÅŸ Ve ÃœstÃ¼":
 				comboBox_2.setSelectedIndex(2);
 				break;
-			case "30 Yaþ Ve Üstü":
+			case "30 YaÅŸ Ve ÃœstÃ¼":
 				comboBox_2.setSelectedIndex(3);
 				break;
 		
@@ -205,16 +205,16 @@ public class AracListele extends JFrame {
 
 	
 	table.setModel(designModel);
-	//BÝLGÝLERÝ GETÝR
+	//BÄ°LGÄ°LERÄ° GETÄ°R
 for(int i=0;i<list.size();i++)
 {
 	row[0]=list.get(i).getId();
 	row[1]=list.get(i).getMarka();
 	row[2]=list.get(i).getModel();
-	row[3]=list.get(i).getYýl();
+	row[3]=list.get(i).getYÄ±l();
 	row[4]=list.get(i).getPlaka();
 	row[5]=list.get(i).getRenk();
-	row[6]=list.get(i).getYakýtTipi();
+	row[6]=list.get(i).getYakÄ±tTipi();
 	row[7]=list.get(i).getVites();
 	row[8]=list.get(i).getYasSiniri();
 	row[9]=list.get(i).getFiyat();
@@ -287,8 +287,8 @@ for(int i=0;i<list.size();i++)
 		JLabel short_spaceLabel6 = new JLabel("                               ");
 
 		
-		JMenu carMenu = new JMenu("Araç Ýþlemeleri");
-		JMenu contratMenu = new JMenu("Sözleþme Ýþlemleri");
+		JMenu carMenu = new JMenu("AraÃ§ Ä°ÅŸlemeleri");
+		JMenu contratMenu = new JMenu("SÃ¶zleÅŸme Ä°ÅŸlemleri");
 		contratMenu.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -306,7 +306,7 @@ for(int i=0;i<list.size();i++)
 				jump.setVisible(true);
 			}
 		});
-		JMenu infoMenu = new JMenu("Hakkýnda");
+		JMenu infoMenu = new JMenu("HakkÄ±nda");
 		infoMenu.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -319,7 +319,7 @@ for(int i=0;i<list.size();i++)
 		
 		
 
-		JMenuItem s5 = new JMenuItem("Araç Listele");
+		JMenuItem s5 = new JMenuItem("AraÃ§ Listele");
 		s5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -329,7 +329,7 @@ for(int i=0;i<list.size();i++)
 				jump.setVisible(true);
 			}
 		});
-		JMenuItem s6 = new JMenuItem("Araç Ekle");
+		JMenuItem s6 = new JMenuItem("AraÃ§ Ekle");
 		s6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -369,7 +369,7 @@ for(int i=0;i<list.size();i++)
 
 	
 		
-		//ÞARTLANDIRMA
+		//ÅžARTLANDIRMA
 		table.setModel(new DefaultTableModel(
 				new Object[][] {
 				},
@@ -388,11 +388,11 @@ for(int i=0;i<list.size();i++)
 					return columnEditables[column];
 				}
 			});
-		//Listelenen Verilerin TextField'lere Aktarýlmasý//
+		//Listelenen Verilerin TextField'lere AktarÄ±lmasÄ±//
 		
 		listele();
 		
-		JScrollPane p =  new JScrollPane(table); //Row Ýsim Gösterme
+		JScrollPane p =  new JScrollPane(table); //Row Ä°sim GÃ¶sterme
 		p.setBounds(12, 269, 1040, 304);
 		contentPane.add(p);
 
@@ -524,7 +524,7 @@ for(int i=0;i<list.size();i++)
 			@Override
 			public void mousePressed(MouseEvent e) {
 				
-				fileChooser.setDialogTitle("BÝR RESÝM SEÇ");
+				fileChooser.setDialogTitle("BÄ°R RESÄ°M SEÃ‡");
 				fileChooser.setAcceptAllFileFilterUsed(false);
 				FileNameExtensionFilter filter = new FileNameExtensionFilter("PNG and GIF images", "png", "gif");
 				fileChooser.addChoosableFileFilter(filter);
@@ -571,7 +571,7 @@ for(int i=0;i<list.size();i++)
 				{
 					
 					JOptionPane.showMessageDialog(null,
-							"Lütfen Bilgileri Güncelleyiniz.",
+							"LÃ¼tfen Bilgileri GÃ¼ncelleyiniz.",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);
 
